@@ -1,0 +1,134 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Indie Flower', cursive;
+}
+
+/* CONTAINER (GLASS CARD) */
+.container {
+  width: 70%;
+  margin-top: 40px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* MAIN HEADING */
+h1 {
+  margin-bottom: 20px;
+  font-family: 'Lobster', cursive;
+  font-size: 6rem;
+  color: #4ECCA3;
+  text-shadow: 5px 0 #232931;
+}
+
+/* RESULT TEXT */
+#win {
+  min-height: 60px;
+  margin-bottom: 30px;
+  font-size: 3rem;
+  color: #ffdd59;
+  text-shadow: 0 0 10px rgba(255, 221, 89, 0.8);
+}
+
+/* PLAYER CARDS */
+.dice {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  width: 240px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dice:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* PLAYER LABEL */
+.dice p {
+  margin-bottom: 15px;
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  color: #4ECCA3;
+  text-shadow: 3px 0 #232931;
+}
+
+/* DICE IMAGE */
+img {
+  width: 80%;
+  transition: transform 0.4s ease;
+}
+
+.dice:hover img {
+  transform: rotate(8deg) scale(1.05);
+}
+
+/* ROLL BUTTON */
+#rollBtn {
+  margin-top: 30px;
+  padding: 14px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+#rollBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+#rollBtn:active {
+  transform: scale(0.95);
+}
+
+/* BUTTON SHINE EFFECT */
+#rollBtn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: left 0.4s ease;
+}
+
+#rollBtn:hover::after {
+  left: 100%;
+}
+
+/* FOOTER */
+footer {
+  margin-top: auto;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  opacity: 0.8;
+  text-align: center;
+}
